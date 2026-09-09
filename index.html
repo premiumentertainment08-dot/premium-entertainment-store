@@ -3,7 +3,7 @@
 <section class="hero" id="home"><div class="copy"><label>🔥 PREMIUM ENTERTAINMENT STORE</label><h1>STREAM MORE.<br><strong>PAY LESS.</strong></h1><p>Netflix • JioHotstar • ZEE5 • SonyLIV • IPTV & more.</p><div class="heroBtns"><a href="#plans" class="btn">View Plans →</a><a href="https://wa.me/917668677629" class="btn alt" target="_blank">WhatsApp Us</a></div></div><div class="heroApps"><div>NETFLIX</div><div>JioHotstar</div><div>ZEE5</div><div>SonyLIV</div><div>STARSHARE</div><div>BOSTV</div><div>ROLEX TV</div></div></section>
 <div class="trust"><span>⚡ Instant Activation</span><span>🛡️ Secure Ordering</span><span>📱 Multiple Devices</span><span>🎧 Fast Support</span><span>💰 Best Prices</span></div>
 <section id="categories"><h2>Browse Categories</h2><div class="cats"><button onclick="setCat('all')">📺<b>All Plans</b></button><button onclick="setCat('subscription')">🎬<b>Subscriptions</b></button><button onclick="setCat('shared')">👥<b>Shared Plans</b></button><button onclick="setCat('tools')">📡<b>IPTV</b></button></div></section>
-<section id="plans"><div class="heading"><div><h2>Choose Your Plan</h2><p>Logo cards with clear pricing and WhatsApp ordering.</p></div><input id="search" placeholder="🔎 Search plans..." oninput="render"></div><div id="grid" class="grid"></div></section>
+<section id="plans"><div class="heading"><div><h2>Choose Your Plan</h2><p>Choose a plan and purchase directly through the website.</p></div><input id="search" placeholder="🔎 Search plans..." oninput="render"></div><div id="grid" class="grid"></div></section>
 
 <section id="payment" class="payment">
   <div class="paymentBox">
@@ -24,4 +24,19 @@
   <div><img src="filex-tv.png" alt="Filex TV"><span>Filex TV</span></div>
 </div></section>
 <section id="faq" class="faq"><h2>Why Choose Us?</h2><div><article>⚡<b>Quick Ordering</b><p>Pick a plan and order directly on WhatsApp.</p></article><article>🔐<b>Secure Process</b><p>Use authorized services and approved payment providers.</p></article><article>💬<b>Support</b><p>Get help through your WhatsApp support channel.</p></article></div></section>
+
+<div id="checkoutModal" class="checkoutModal" aria-hidden="true">
+  <div class="checkoutBox">
+    <button class="closeCheckout" onclick="closeCheckout()">×</button>
+    <span class="payTag">🛒 SECURE CHECKOUT</span>
+    <h2>Complete Your Purchase</h2>
+    <p id="checkoutPlan" class="checkoutPlan"></p>
+    <input id="customerName" placeholder="Your Name" autocomplete="name">
+    <input id="customerEmail" placeholder="Email Address" type="email" autocomplete="email">
+    <input id="customerPhone" placeholder="Mobile Number" type="tel" autocomplete="tel">
+    <button class="payNow" onclick="payNow()">💳 Pay Now via UPI</button>
+    <p class="checkoutNote">After payment, keep the transaction/reference ID. Your order details can be sent to support for activation.</p>
+    <a id="checkoutWhatsApp" class="checkoutWA" target="_blank">💬 Send Order Details on WhatsApp</a>
+  </div>
+</div>
 <a href="#payment" class="payFloat">💳 Pay UPI</a><a class="wa" href="https://wa.me/917668677629" target="_blank">💬 WhatsApp</a><footer>© 2026 Premium Entertainment Store • Use only authorized services and plans</footer><script>document.getElementById('search').addEventListener('input',render);</script><script src="app.js"></script></body></html>
