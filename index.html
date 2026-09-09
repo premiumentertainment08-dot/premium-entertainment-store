@@ -4,5 +4,25 @@
 <div class="trust"><span>⚡ Instant Activation</span><span>🛡️ Secure Ordering</span><span>📱 Multiple Devices</span><span>🎧 Fast Support</span><span>💰 Best Prices</span></div>
 <section id="categories"><h2>Browse Categories</h2><div class="cats"><button onclick="setCat('all')">📺<b>All Plans</b></button><button onclick="setCat('subscription')">🎬<b>Subscriptions</b></button><button onclick="setCat('shared')">👥<b>Shared Plans</b></button><button onclick="setCat('tools')">📡<b>IPTV</b></button></div></section>
 <section id="plans"><div class="heading"><div><h2>Choose Your Plan</h2><p>Logo cards with clear pricing and WhatsApp ordering.</p></div><input id="search" placeholder="🔎 Search plans..." oninput="render"></div><div id="grid" class="grid"></div></section>
+
+<section id="payment" class="payment">
+  <div class="paymentBox">
+    <div>
+      <span class="payTag">💳 PAYMENT OPTIONS</span>
+      <h2>Pay Securely via UPI</h2><h3 class="payName">Universal Telecommunication Service</h3>
+      <p>Scan the QR code or use the UPI ID below. After payment, send the payment screenshot on WhatsApp.</p>
+      <div class="upiRow"><b>UPI ID:</b> <span id="upiId">Q00403870@ybl</span><button onclick="navigator.clipboard.writeText('Q00403870@ybl')">Copy UPI</button></div>
+      <a class="btn paywa" href="https://wa.me/917668677629?text=Hi%2C%20I%20have%20completed%20the%20payment.%20I%20am%20sending%20the%20payment%20screenshot." target="_blank">💬 Payment Done — Send Screenshot</a>
+    </div>
+    <div class="qrWrap"><img src="payment-qr.jpg" alt="Premium Entertainment Store UPI payment QR code"></div>
+  </div>
+</section>
+
+<section class="brandShowcase"><h2>Our IPTV Brands</h2><p>Available IPTV brand logos</p><div class="brandLogos">
+  <div><img src="logos/starshare-iptv.png" alt="Starshare IPTV"><span>Starshare IPTV</span></div>
+  <div><img src="logos/b1g-iptv.png" alt="B1G IPTV"><span>B1G IPTV</span></div>
+  <div><img src="logos/rolex-tv.png" alt="Rolex TV"><span>Rolex TV</span></div>
+  <div><img src="logos/filex-tv.png" alt="Filex TV"><span>Filex TV</span></div>
+</div></section>
 <section id="faq" class="faq"><h2>Why Choose Us?</h2><div><article>⚡<b>Quick Ordering</b><p>Pick a plan and order directly on WhatsApp.</p></article><article>🔐<b>Secure Process</b><p>Use authorized services and approved payment providers.</p></article><article>💬<b>Support</b><p>Get help through your WhatsApp support channel.</p></article></div></section>
-<a class="wa" href="https://wa.me/917668677629" target="_blank">💬 WhatsApp</a><footer>© 2026 Premium Entertainment Store • Use only authorized services and plans</footer><script>document.getElementById('search').addEventListener('input',render);</script><script src="app.js"></script></body></html>
+<a href="#payment" class="payFloat">💳 Pay UPI</a><a class="wa" href="https://wa.me/917668677629" target="_blank">💬 WhatsApp</a><footer>© 2026 Premium Entertainment Store • Use only authorized services and plans</footer><script>document.getElementById('search').addEventListener('input',render);</script><script src="app.js"></script></body></html>

@@ -1,13 +1,13 @@
 const WHATSAPP='917668677629';
 const logos={
-  netflix:'https://cdn.simpleicons.org/netflix/E50914',
-  jiohotstar:'https://cdn.simpleicons.org/jiohotstar/0B72E7',
-  zee5:'https://cdn.simpleicons.org/zee5/8A2BE2',
-  sonyliv:'https://cdn.simpleicons.org/sonyliv/FF0055',
-  starshare:'https://cdn.simpleicons.org/airplay/FF7A00',
-  bostv:'https://cdn.simpleicons.org/television/1677FF',
-  rolex:'https://cdn.simpleicons.org/crown/FFD700'
-};
+  netflix:'logos/netflix.svg',
+  jiohotstar:'logos/jiohotstar.svg',
+  zee5:'logos/zee5.svg',
+  sonyliv:'logos/sonyliv.svg',
+  starshare:'logos/starshare-iptv.png',
+  bostv:'logos/b1g-iptv.png',
+  rolex:'logos/rolex-tv.png'
+}
 const plans=[
 {name:'Netflix 4K',price:99,cat:'subscription',logo:'netflix',fallback:'N',badge:'POPULAR',meta:'1 Month'},
 {name:'Netflix 4K',price:249,cat:'subscription',logo:'netflix',fallback:'N',badge:'VALUE',meta:'3 Months'},
