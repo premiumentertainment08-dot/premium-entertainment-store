@@ -54,7 +54,35 @@ const plans=[
 ];
 let current='all';
 function setCat(c){current=c;render()}
-function order(x){const text=`Hi, I want to order ${x.name} - ${x.meta} - ₹${x.price}.`;window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`,'_blank')}
+let selectedPlan=null;
+function order(x){
+  selectedPlan=x;
+  const el=document.getElementById('checkoutPlan');
+  if(el) el.textContent=`${x.name} • ${x.meta} • ₹${x.price}`;
+  updateCheckoutLink();
+  const modal=document.getElementById('checkoutModal');
+  if(modal){modal.classList.add('show');modal.setAttribute('aria-hidden','false');}
+}
+function closeCheckout(){
+  const modal=document.getElementById('checkoutModal');
+  if(modal){modal.classList.remove('show');modal.setAttribute('aria-hidden','true');}
+}
+function updateCheckoutLink(){
+  if(!selectedPlan) return;
+  const name=document.getElementById('customerName')?.value||'';
+  const email=document.getElementById('customerEmail')?.value||'';
+  const phone=document.getElementById('customerPhone')?.value||'';
+  const text=`Hi, I want to order ${selectedPlan.name} - ${selectedPlan.meta} - ₹${selectedPlan.price}. Name: ${name}. Email: ${email}. Mobile: ${phone}.`;
+  const a=document.getElementById('checkoutWhatsApp');
+  if(a) a.href=`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+}
+function payNow(){
+  if(!selectedPlan) return;
+  const name=document.getElementById('customerName')?.value.trim()||'Customer';
+  const note=`${selectedPlan.name} - ${selectedPlan.meta} - ${name}`;
+  const upi=`upi://pay?pa=Q00403870@ybl&pn=Universal%20Telecommunication%20Service&am=${encodeURIComponent(selectedPlan.price)}&cu=INR&tn=${encodeURIComponent(note)}`;
+  window.location.href=upi;
+}
 function logoHtml(x){const url=logos[x.logo]; return `<div class="pic"><img src="${url}" alt="${x.name} logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span>${x.fallback||'★'}</span></div>`}
-function render(){const q=(document.getElementById('search')?.value||'').toLowerCase();const custom=JSON.parse(localStorage.petProducts||'[]');const a=plans.concat(custom).filter(x=>(current==='all'||x.cat===current)&&(`${x.name} ${x.meta}`.toLowerCase().includes(q)));document.getElementById('grid').innerHTML=a.map(x=>`<article class="card">${logoHtml(x)}<span class="badge">${x.badge||'NEW'}</span><h3>${x.name}</h3><p class="meta">${x.meta||''}</p><p class="price">₹${x.price}</p><button class="buy" onclick='order(${JSON.stringify(x)})'>💬 Order on WhatsApp</button></article>`).join('')||'<p>No plans found.</p>'}
+function render(){const q=(document.getElementById('search')?.value||'').toLowerCase();const custom=JSON.parse(localStorage.petProducts||'[]');const a=plans.concat(custom).filter(x=>(current==='all'||x.cat===current)&&(`${x.name} ${x.meta}`.toLowerCase().includes(q)));document.getElementById('grid').innerHTML=a.map(x=>`<article class="card">${logoHtml(x)}<span class="badge">${x.badge||'NEW'}</span><h3>${x.name}</h3><p class="meta">${x.meta||''}</p><p class="price">₹${x.price}</p><button class="buy" onclick='order(${JSON.stringify(x)})'>🛒 Buy Now</button></article>`).join('')||'<p>No plans found.</p>'}
 render();
