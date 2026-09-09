@@ -3,28 +3,57 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Premium Entertainment Store</title>
-<meta name="description" content="Premium Entertainment Store — entertainment subscriptions and premium digital tools.">
+<meta name="description" content="Premium Entertainment Store — entertainment, IPTV and premium digital tools.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="brand"><div class="brandmark">PE</div><div><b>PREMIUM</b><span>ENTERTAINMENT STORE</span></div></div>
-  <a class="wa mini" href="https://wa.me/917668677629" target="_blank">WhatsApp</a>
+<div class="noise"></div>
+<header class="nav">
+  <a class="logoMark" href="#top"><span>♛</span><div><strong>PREMIUM</strong><small>ENTERTAINMENT STORE</small></div></a>
+  <a class="support" href="https://wa.me/917668677629" target="_blank">💬 <span>Support</span></a>
 </header>
+
+<main id="top">
 <section class="hero">
-  <div class="glow g1"></div><div class="glow g2"></div>
-  <div class="hero-copy"><div class="pill">⚡ PREMIUM DIGITAL STORE</div><h1>Entertainment.<br><em>Premium Tools.</em><br>One Place.</h1><p>Choose your plan, tap <b>Buy Now</b> and pay securely with UPI.</p><div class="hero-actions"><a href="#plans" class="primary">Explore Plans ↓</a><a href="https://wa.me/917668677629" class="ghost" target="_blank">Need Help?</a></div></div>
-  <div class="hero-card"><div class="hc-top"><span>🔥 TODAY'S PICKS</span><span>Secure UPI</span></div><div class="hc-main"><strong>Buy smarter.</strong><small>Fast checkout • Personal activation on selected plans</small></div><div class="stats"><div><b>10+</b><span>Categories</span></div><div><b>30+</b><span>Plans</span></div><div><b>24/7</b><span>Support</span></div></div></div>
+  <div class="heroText">
+    <div class="kicker"><i></i> PREMIUM DIGITAL MARKET</div>
+    <h1>Your favourites.<br><span>One smart store.</span></h1>
+    <p>Entertainment subscriptions, IPTV and premium digital tools — choose a plan and checkout in seconds.</p>
+    <div class="heroBtns"><a class="cta" href="#catalog">Browse Plans <b>↓</b></a><a class="outline" href="https://wa.me/917668677629" target="_blank">Chat on WhatsApp</a></div>
+    <div class="trust"><span>✓ UPI checkout</span><span>✓ Quick support</span><span>✓ Clear pricing</span></div>
+  </div>
+  <div class="heroVisual">
+    <div class="orbit o1"></div><div class="orbit o2"></div>
+    <div class="featureCard"><span class="miniLabel">TODAY'S STORE</span><div class="bigIcon">✦</div><h3>Premium access<br><em>made simple.</em></h3><div class="featureBottom"><span>30+ plans</span><span>UPI • WhatsApp</span></div></div>
+  </div>
 </section>
-<nav class="tabs"><a class="active" href="#plans">All</a><a href="#entertainment">Entertainment</a><a href="#iptv">IPTV</a><a href="#tools">AI & Tools</a></nav>
-<main id="plans">
-<section class="section" id="entertainment"><div class="section-head"><div><span class="eyebrow">STREAMING</span><h2>Entertainment Plans</h2><p>Popular subscriptions at simple prices.</p></div></div><div class="grid" id="entGrid"></div></section>
-<section class="section" id="iptv"><div class="section-head"><div><span class="eyebrow">LIVE TV</span><h2>IPTV Plans</h2><p>Pick your duration and continue to checkout.</p></div></div><div class="grid" id="iptvGrid"></div></section>
-<section class="section" id="tools"><div class="section-head"><div><span class="eyebrow">PRODUCTIVITY</span><h2>AI & Premium Tools</h2><p>Creative, AI and productivity offers.</p></div></div><div class="grid" id="toolGrid"></div></section>
-<section class="why"><div><span class="eyebrow">WHY SHOP HERE</span><h2>Simple. Fast. Clear.</h2></div><div class="whygrid"><div><b>⚡</b><strong>Quick Checkout</strong><span>Select → Pay → Send order details.</span></div><div><b>🔐</b><strong>UPI Payment</strong><span>Pay using your preferred UPI app.</span></div><div><b>💬</b><strong>WhatsApp Support</strong><span>Get help at 7668677629.</span></div></div></section>
-<section class="pay"><div><span class="eyebrow">PAYMENT</span><h2>Ready to order?</h2><p>Use the Buy Now button on any plan. Your order summary is prepared automatically.</p><a class="primary" href="#plans">View Plans</a></div><div class="qrbox"><img src="payment-qr.jpg" alt="UPI payment QR"><small>UPI • Q00403870@ybl</small></div></section>
+
+<div class="quickNav" id="catalog"><a href="#entertainment">🎬 Entertainment</a><a href="#iptv">📺 IPTV</a><a href="#tools">✨ AI & Tools</a><a href="#payment">💳 Payment</a></div>
+
+<section class="catalogSection" id="entertainment">
+  <div class="sectionTitle"><div><small>01 / STREAMING</small><h2>Entertainment</h2></div><p>Popular plans, simple choices.</p></div>
+  <div class="grid" id="entGrid"></div>
+</section>
+
+<section class="catalogSection alt" id="iptv">
+  <div class="sectionTitle"><div><small>02 / LIVE TV</small><h2>IPTV</h2></div><p>Choose duration and continue.</p></div>
+  <div class="grid" id="iptvGrid"></div>
+</section>
+
+<section class="catalogSection" id="tools">
+  <div class="sectionTitle"><div><small>03 / PRODUCTIVITY</small><h2>AI & Premium Tools</h2></div><p>Creative and productivity offers.</p></div>
+  <div class="grid" id="toolGrid"></div>
+</section>
+
+<section class="payment" id="payment">
+  <div class="payCopy"><small>SECURE CHECKOUT</small><h2>Ready when you are.</h2><p>Tap <b>Buy Now</b> on any plan. You can pay through your UPI app and send the order details on WhatsApp.</p><div class="payPoints"><span>01 <b>Select a plan</b></span><span>02 <b>Pay with UPI</b></span><span>03 <b>Send order details</b></span></div></div>
+  <div class="qr"><img src="payment-qr.jpg" alt="UPI payment QR"><b>Q00403870@ybl</b><small>Universal Telecommunication Service</small></div>
+</section>
+
+<section class="help"><div><small>NEED HELP?</small><h2>We’re one message away.</h2></div><a class="cta" href="https://wa.me/917668677629" target="_blank">WhatsApp 7668677629 →</a></section>
 </main>
-<footer><div class="brand"><div class="brandmark">PE</div><div><b>PREMIUM</b><span>ENTERTAINMENT STORE</span></div></div><p>For support: <a href="https://wa.me/917668677629">7668677629</a></p><small>© 2026 Premium Entertainment Store • Please use authorized products/services only.</small></footer>
-<div class="modal" id="modal"><div class="sheet"><button class="close" onclick="closeBuy()">×</button><span class="eyebrow">SECURE CHECKOUT</span><h2 id="mTitle">Your Order</h2><div class="summary"><span id="mPlan"></span><b id="mPrice"></b></div><label>Name<input id="name" placeholder="Your name"></label><label>Email<input id="email" type="email" placeholder="your@email.com"></label><label>Mobile<input id="mobile" inputmode="numeric" placeholder="10 digit mobile"></label><button class="paybtn" onclick="payNow()">💳 Pay Now with UPI</button><button class="wabtn" onclick="sendWhatsApp()">💬 Send Order on WhatsApp</button><p class="tiny">After payment, keep your transaction/reference ID. Activation is handled according to the selected service.</p></div></div>
+<footer><div class="footerLogo">♛ PREMIUM ENTERTAINMENT STORE</div><p>© 2026 Premium Entertainment Store</p><small>Use only authorized products and approved payment services.</small></footer>
+
+<div class="modal" id="modal"><div class="sheet"><button class="close" onclick="closeBuy()">×</button><div class="modalTop"><small>CHECKOUT</small><span>🔒 UPI</span></div><h2 id="mTitle">Your Order</h2><div class="summary"><div><small>SELECTED PLAN</small><span id="mPlan"></span></div><b id="mPrice"></b></div><label>Name<input id="name" placeholder="Your name"></label><label>Email<input id="email" type="email" placeholder="your@email.com"></label><label>Mobile<input id="mobile" inputmode="numeric" placeholder="10 digit mobile"></label><button class="paybtn" onclick="payNow()">Pay Now with UPI →</button><button class="wabtn" onclick="sendWhatsApp()">Send Order on WhatsApp</button><p class="tiny">After payment, keep your transaction/reference ID. Activation is handled according to the selected service.</p></div></div>
 <script src="app.js"></script>
 </body></html>
