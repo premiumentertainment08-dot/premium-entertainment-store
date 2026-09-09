@@ -11,7 +11,8 @@ const logos={
   spotify:'spotify.svg',
   starshare:'starshare-iptv.png',
   bostv:'bostv-prime-iptv.png',
-  rolex:'rolex-tv.png'
+  rolex:'rolex-tv.png',
+  filex:'filex-tv.png'
 };
 const plans=[
 {name:'Netflix 4K',price:99,cat:'subscription',logo:'netflix',fallback:'N',badge:'POPULAR',meta:'1 Month'},
