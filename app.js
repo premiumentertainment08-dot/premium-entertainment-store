@@ -56,4 +56,4 @@ function setCat(c){current=c;render()}
 function order(x){const text=`Hi, I want to order ${x.name} - ${x.meta} - ₹${x.price}.`;window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`,'_blank')}
 function logoHtml(x){const url=logos[x.logo]; return `<div class="pic"><img src="${url}" alt="${x.name} logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span>${x.fallback||'★'}</span></div>`}
 function render(){const q=(document.getElementById('search')?.value||'').toLowerCase();const custom=JSON.parse(localStorage.petProducts||'[]');const a=plans.concat(custom).filter(x=>(current==='all'||x.cat===current)&&(`${x.name} ${x.meta}`.toLowerCase().includes(q)));document.getElementById('grid').innerHTML=a.map(x=>`<article class="card">${logoHtml(x)}<span class="badge">${x.badge||'NEW'}</span><h3>${x.name}</h3><p class="meta">${x.meta||''}</p><p class="price">₹${x.price}</p><button class="buy" onclick='order(${JSON.stringify(x)})'>💬 Order on WhatsApp</button></article>`).join('')||'<p>No plans found.</p>'}
-render();'
+render();
