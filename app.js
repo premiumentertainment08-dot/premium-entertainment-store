@@ -1,12 +1,12 @@
 const WHATSAPP='917668677629';
 const logos={
-  netflix:'logos/netflix.svg',
-  jiohotstar:'logos/jiohotstar.svg',
-  zee5:'logos/zee5.svg',
-  sonyliv:'logos/sonyliv.svg',
-  starshare:'logos/starshare-iptv.png',
-  bostv:'logos/b1g-iptv.png',
-  rolex:'logos/rolex-tv.png'
+  netflix:'netflix.svg',
+  jiohotstar:'jiohotstar.svg',
+  zee5:'zee5.svg',
+  sonyliv:'sonyliv.svg',
+  starshare:'starshare-iptv.png',
+  bostv:'b1g-iptv.png',
+  rolex:'rolex-tv.png'
 }
 const plans=[
 {name:'Netflix 4K',price:99,cat:'subscription',logo:'netflix',fallback:'N',badge:'POPULAR',meta:'1 Month'},
