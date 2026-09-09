@@ -5,7 +5,7 @@ const logos={
   zee5:'zee5.svg',
   sonyliv:'sonyliv.svg',
   starshare:'starshare-iptv.png',
-  bostv:'b1g-iptv.png',
+  bostv:'bostv-prime-iptv.png',
   rolex:'rolex-tv.png'
 }
 const plans=[
