@@ -2,56 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Premium Entertainment Store</title><link rel="stylesheet" href="style.css">
+<title>Premium Entertainment Store</title>
+<meta name="description" content="Premium Entertainment Store — entertainment subscriptions and premium digital tools.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
-  <div class="brand"><div class="crown">♛</div><div><b>PREMIUM</b><span>ENTERTAINMENT STORE</span></div></div>
-  <nav><a href="#home">Home</a><a href="#plans">All Plans</a><a href="#tools">Tools</a><a href="#how">How to Buy</a><a href="#support">Support</a></nav>
-  <a class="waTop" href="https://wa.me/917668677629" target="_blank">💬</a>
+<header class="topbar">
+  <div class="brand"><div class="brandmark">PE</div><div><b>PREMIUM</b><span>ENTERTAINMENT STORE</span></div></div>
+  <a class="wa mini" href="https://wa.me/917668677629" target="_blank">WhatsApp</a>
 </header>
-
-<section class="hero" id="home">
-  <div><small>PREMIUM DIGITAL STORE</small><h1>Entertainment &amp; <em>Premium Tools</em></h1>
-  <p>OTT subscriptions, IPTV and powerful AI &amp; creator tools in one place.</p>
-  <div class="heroBtns"><a href="#plans">Explore Plans</a><a href="#tools">AI &amp; Tools</a></div></div>
-  <div class="heroArt"><div class="orb">PREMIUM<br><strong>STORE</strong></div></div>
+<section class="hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="hero-copy"><div class="pill">⚡ PREMIUM DIGITAL STORE</div><h1>Entertainment.<br><em>Premium Tools.</em><br>One Place.</h1><p>Choose your plan, tap <b>Buy Now</b> and pay securely with UPI.</p><div class="hero-actions"><a href="#plans" class="primary">Explore Plans ↓</a><a href="https://wa.me/917668677629" class="ghost" target="_blank">Need Help?</a></div></div>
+  <div class="hero-card"><div class="hc-top"><span>🔥 TODAY'S PICKS</span><span>Secure UPI</span></div><div class="hc-main"><strong>Buy smarter.</strong><small>Fast checkout • Personal activation on selected plans</small></div><div class="stats"><div><b>10+</b><span>Categories</span></div><div><b>30+</b><span>Plans</span></div><div><b>24/7</b><span>Support</span></div></div></div>
 </section>
-
-<section class="section" id="plans"><div class="heading"><span>01</span><h2>Entertainment Plans</h2></div>
-<div class="grid">
-  <article class="card"><img src="netflix.svg"><h3>Netflix 4K</h3><p>1 Month ₹99 • 3 Months ₹249 • 6 Months ₹399 • 12 Months ₹699</p><button onclick="buy('Netflix 4K','12 Months','699')">Buy Now</button></article>
-  <article class="card"><img src="jiohotstar.svg"><h3>JioHotstar Premium 4K</h3><p>3 Months ₹249 • 6 Months ₹449 • 12 Months ₹749</p><button onclick="buy('JioHotstar Premium 4K','12 Months','749')">Buy Now</button></article>
-  <article class="card"><img src="zee5.svg"><h3>ZEE5</h3><p>1 Year ₹399 • Activation on your number</p><button onclick="buy('ZEE5','1 Year','399')">Buy Now</button></article>
-  <article class="card"><img src="sonyliv.svg"><h3>SonyLIV</h3><p>Shared: 1M ₹99 • 3M ₹149 • 6M ₹199 • 1Y ₹299<br>Personal 5 Devices: 1Y ₹699</p><button onclick="buy('SonyLIV','1 Year','699')">Buy Now</button></article>
-  <article class="card"><img src="youtube.svg"><h3>YouTube Premium</h3><p>1 Month ₹49 • 3 Months ₹189 • 6 Months ₹399 • Activation on your mail</p><button onclick="buy('YouTube Premium','6 Months','399')">Buy Now</button></article>
-  <article class="card"><img src="hoichoi.svg"><h3>Hoichoi Premium</h3><p>1 Month ₹59 • 6 Months ₹299 • 1 Year ₹399</p><button onclick="buy('Hoichoi Premium','1 Year','399')">Buy Now</button></article>
-  <article class="card"><img src="primevideo.svg"><h3>Prime Video Premium</h3><p>6 Months ₹349 • 1 Year ₹599 • Personal email • 5 devices</p><button onclick="buy('Prime Video Premium','1 Year','599')">Buy Now</button></article>
-  <article class="card"><img src="canva.svg"><h3>Canva Pro Personal</h3><p>6 Months ₹199 • 1 Year ₹299</p><button onclick="buy('Canva Pro Personal','1 Year','299')">Buy Now</button></article>
-  <article class="card"><img src="spotify.svg"><h3>Spotify Standard</h3><p>2 Months ₹99 • 3 Months ₹149 • Personal email activation</p><button onclick="buy('Spotify Standard','3 Months','149')">Buy Now</button></article>
-  <article class="card"><img src="starshare-iptv.png"><h3>Starshare IPTV</h3><p>1M ₹150 • 3M ₹399 • 6M ₹699 • 12M ₹1299</p><button onclick="buy('Starshare IPTV','12 Months','1299')">Buy Now</button></article>
-  <article class="card"><img src="bostv-prime-iptv.png"><h3>BOSTV Prime IPTV</h3><p>3 Months ₹299 • 6 Months ₹549 • 12 Months ₹899</p><button onclick="buy('BOSTV Prime IPTV','12 Months','899')">Buy Now</button></article>
-  <article class="card"><img src="rolex-tv.png"><h3>Rolex TV</h3><p>3 Months ₹249 • 6 Months ₹449 • 12 Months ₹799</p><button onclick="buy('Rolex TV','12 Months','799')">Buy Now</button></article>
-  <article class="card"><img src="filex-tv.png"><h3>Filex TV</h3><p>Premium IPTV service — contact for current plan.</p><button onclick="buy('Filex TV','Contact','0')">Enquire</button></article>
-  <article class="card"><div class="textLogo">PLAY<br><span>OTT</span></div><h3>Play OTT Yearly</h3><p>25+ OTT platforms • Multiple devices • Up to 5 devices • ₹699/year</p><button onclick="buy('Play OTT','Yearly','699')">Buy Now</button></article>
-</div></section>
-
-<section class="section tools" id="tools"><div class="heading"><span>02</span><h2>AI &amp; Premium Tools</h2></div>
-<div class="grid">
-  <article class="card tool"><img src="super-grok.jpg"><h3>Super Grok</h3><p>3 Months • Reference ₹8,700 • Offer ₹3,599<br>Longer conversations, app creation, expert mode, AI image/video, voice and coding tools.</p><button onclick="buy('Super Grok','3 Months','3599')">Buy Now</button></article>
-  <article class="card tool"><img src="gamma-ai.jpg"><h3>Gamma AI Pro</h3><p>12 Months • Reference ₹11,000 • Offer ₹499<br>AI creation, image generation, advanced editing, 60 cards, custom fonts, domain URLs, AI tokens.</p><button onclick="buy('Gamma AI Pro','12 Months','499')">Buy Now</button></article>
-  <article class="card tool"><img src="gemini-pro.jpg"><h3>Gemini Pro</h3><p>18 Months • ₹399 • Personal email activation<br>Deep Research, image/video generation, coding, Notebook, Gmail/Docs, 5TB storage and Flow credits.</p><button onclick="buy('Gemini Pro','18 Months','399')">Buy Now</button></article>
-  <article class="card tool"><img src="linkedin-career.jpg"><h3>LinkedIn Career Premium</h3><p>12 Months • ₹1,299<br>Profile insights, InMails, applicant insights, job search, Learning and career tools.</p><button onclick="buy('LinkedIn Career Premium','12 Months','1299')">Buy Now</button></article>
-  <article class="card tool"><img src="capcut-pro.jpg"><h3>CapCut Pro</h3><p>6 Months • ₹3,499 • On your mail<br>Individual account, premium effects, templates, AI tools, no-watermark export and support.</p><button onclick="buy('CapCut Pro','6 Months','3499')">Buy Now</button></article>
-  <article class="card tool"><img src="gaana-plus.jpg"><h3>Gaana Plus</h3><p>1 Year • ₹299 • Activation on your number<br>Ad-free music, offline downloads and high-quality audio.</p><button onclick="buy('Gaana Plus','1 Year','299')">Buy Now</button></article>
-</div></section>
-
-<section class="how" id="how"><h2>How to Buy</h2><div><b>1</b> Select a plan &nbsp; → &nbsp; <b>2</b> Enter details &nbsp; → &nbsp; <b>3</b> Pay via UPI &nbsp; → &nbsp; <b>4</b> Send order details</div></section>
-
-<section class="checkout" id="checkout"><div><h2>🔒 Secure Checkout</h2><p>Selected plan: <strong id="sel">—</strong></p>
-<input id="name" placeholder="Your Name"><input id="email" type="email" placeholder="Your Email"><input id="mobile" inputmode="numeric" placeholder="WhatsApp Number">
-<button id="pay">Pay Now via UPI</button><a id="wa" target="_blank">Send Order Details on WhatsApp</a></div></section>
-
-<footer id="support"><div class="trust"><span>🛡️ Secure Payment</span><span>⚡ Fast Activation</span><span>🎧 Customer Support</span><span>⭐ Premium Service</span></div><p>© 2026 Premium Entertainment Store • <a href="https://wa.me/917668677629">WhatsApp Support</a></p></footer>
+<nav class="tabs"><a class="active" href="#plans">All</a><a href="#entertainment">Entertainment</a><a href="#iptv">IPTV</a><a href="#tools">AI & Tools</a></nav>
+<main id="plans">
+<section class="section" id="entertainment"><div class="section-head"><div><span class="eyebrow">STREAMING</span><h2>Entertainment Plans</h2><p>Popular subscriptions at simple prices.</p></div></div><div class="grid" id="entGrid"></div></section>
+<section class="section" id="iptv"><div class="section-head"><div><span class="eyebrow">LIVE TV</span><h2>IPTV Plans</h2><p>Pick your duration and continue to checkout.</p></div></div><div class="grid" id="iptvGrid"></div></section>
+<section class="section" id="tools"><div class="section-head"><div><span class="eyebrow">PRODUCTIVITY</span><h2>AI & Premium Tools</h2><p>Creative, AI and productivity offers.</p></div></div><div class="grid" id="toolGrid"></div></section>
+<section class="why"><div><span class="eyebrow">WHY SHOP HERE</span><h2>Simple. Fast. Clear.</h2></div><div class="whygrid"><div><b>⚡</b><strong>Quick Checkout</strong><span>Select → Pay → Send order details.</span></div><div><b>🔐</b><strong>UPI Payment</strong><span>Pay using your preferred UPI app.</span></div><div><b>💬</b><strong>WhatsApp Support</strong><span>Get help at 7668677629.</span></div></div></section>
+<section class="pay"><div><span class="eyebrow">PAYMENT</span><h2>Ready to order?</h2><p>Use the Buy Now button on any plan. Your order summary is prepared automatically.</p><a class="primary" href="#plans">View Plans</a></div><div class="qrbox"><img src="payment-qr.jpg" alt="UPI payment QR"><small>UPI • Q00403870@ybl</small></div></section>
+</main>
+<footer><div class="brand"><div class="brandmark">PE</div><div><b>PREMIUM</b><span>ENTERTAINMENT STORE</span></div></div><p>For support: <a href="https://wa.me/917668677629">7668677629</a></p><small>© 2026 Premium Entertainment Store • Please use authorized products/services only.</small></footer>
+<div class="modal" id="modal"><div class="sheet"><button class="close" onclick="closeBuy()">×</button><span class="eyebrow">SECURE CHECKOUT</span><h2 id="mTitle">Your Order</h2><div class="summary"><span id="mPlan"></span><b id="mPrice"></b></div><label>Name<input id="name" placeholder="Your name"></label><label>Email<input id="email" type="email" placeholder="your@email.com"></label><label>Mobile<input id="mobile" inputmode="numeric" placeholder="10 digit mobile"></label><button class="paybtn" onclick="payNow()">💳 Pay Now with UPI</button><button class="wabtn" onclick="sendWhatsApp()">💬 Send Order on WhatsApp</button><p class="tiny">After payment, keep your transaction/reference ID. Activation is handled according to the selected service.</p></div></div>
 <script src="app.js"></script>
 </body></html>
