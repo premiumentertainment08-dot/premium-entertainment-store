@@ -5,5 +5,19 @@
 <div class="cats"><button onclick="filterCat('OTT')">📺<b>OTT</b><small>Movies, Web Series</small></button><button onclick="filterCat('IPTV')">🖥<b>IPTV</b><small>Live TV, Sports</small></button><button onclick="filterCat('AI Tools')">🤖<b>AI Tools</b><small>Boost Productivity</small></button><button onclick="filterCat('Premium Apps')">▦<b>Premium Apps</b><small>Professional Tools</small></button><button onclick="filterCat('All')">🏷<b>All Products</b><small>Explore More</small></button><button onclick="filterCat('Activations')">⚡<b>Activations</b><small>Player Activations</small></button></div>
 <main><div class="sectionHead"><h2>🔥 Popular Subscriptions</h2><button onclick="filterCat('All')">View All →</button></div><div id="products" class="grid"></div></main>
 <footer><div>PREMIUM ENTERTAINMENT STORE</div><small>Experience Excellence • Secure Checkout • Customer Support</small></footer><a class="wa" href="https://wa.me/917668677629" target="_blank">◉ Chat with us</a>
-<div id="modal" class="modal"><div class="checkout"><button class="close" onclick="closeModal()">×</button><h2>Secure Checkout</h2><p id="selected"></p><label>Name<input id="name"></label><label>Email<input id="email"></label><label>Mobile<input id="mobile"></label><button class="pay" onclick="payNow()">💳 Pay Now via UPI</button><button class="order" onclick="waOrder()">💬 Send Order on WhatsApp</button><small>UPI: Q00403870@ybl<br>Payment name: Universal Telecommunication Service</small></div></div>
+<div id="modal" class="modal"><div class="checkout planCheckout">
+<button class="close" onclick="closeModal()">×</button>
+<div class="checkoutTitle"><span>🛒</span><div><h2>Choose Your Plan</h2><small id="checkoutProduct"></small></div></div>
+<div class="instant">⚡ Instant Activation — Select a plan below</div>
+<div class="selectLabel">Choose plan</div>
+<div id="planOptions" class="planOptions"></div>
+<div class="qtyRow"><span>Qty</span><button onclick="changeQty(-1)">−</button><b id="qty">1</b><button onclick="changeQty(1)">+</button><strong>Total <span id="total">₹0</span></strong></div>
+<div class="planDetails"><h3>Plan Details</h3><p id="detailText"></p><div id="detailFeatures"></div></div>
+<label>Name<input id="name" placeholder="Enter your name"></label>
+<label>Email<input id="email" placeholder="Enter your email"></label>
+<label>Mobile<input id="mobile" placeholder="Enter mobile number"></label>
+<button class="pay" onclick="payNow()">💳 Pay Now <span id="payAmount">₹0</span> via UPI</button>
+<button class="order" onclick="waOrder()">💬 Send Order on WhatsApp</button>
+<small>UPI: Q00403870@ybl<br>Payment name: Universal Telecommunication Service</small>
+</div></div>
 <script src="app.js"></script></body></html>
