@@ -1,59 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Premium Entertainment Store</title>
-<meta name="description" content="Premium Entertainment Store — entertainment, IPTV and premium digital tools.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="noise"></div>
-<header class="nav">
-  <a class="logoMark" href="#top"><span>♛</span><div><strong>PREMIUM</strong><small>ENTERTAINMENT STORE</small></div></a>
-  <a class="support" href="https://wa.me/917668677629" target="_blank">💬 <span>Support</span></a>
-</header>
-
-<main id="top">
-<section class="hero">
-  <div class="heroText">
-    <div class="kicker"><i></i> PREMIUM DIGITAL MARKET</div>
-    <h1>Your favourites.<br><span>One smart store.</span></h1>
-    <p>Entertainment subscriptions, IPTV and premium digital tools — choose a plan and checkout in seconds.</p>
-    <div class="heroBtns"><a class="cta" href="#catalog">Browse Plans <b>↓</b></a><a class="outline" href="https://wa.me/917668677629" target="_blank">Chat on WhatsApp</a></div>
-    <div class="trust"><span>✓ UPI checkout</span><span>✓ Quick support</span><span>✓ Clear pricing</span></div>
-  </div>
-  <div class="heroVisual">
-    <div class="orbit o1"></div><div class="orbit o2"></div>
-    <div class="featureCard"><span class="miniLabel">TODAY'S STORE</span><div class="bigIcon">✦</div><h3>Premium access<br><em>made simple.</em></h3><div class="featureBottom"><span>30+ plans</span><span>UPI • WhatsApp</span></div></div>
-  </div>
-</section>
-
-<div class="quickNav" id="catalog"><a href="#entertainment">🎬 Entertainment</a><a href="#iptv">📺 IPTV</a><a href="#tools">✨ AI & Tools</a><a href="#payment">💳 Payment</a></div>
-
-<section class="catalogSection" id="entertainment">
-  <div class="sectionTitle"><div><small>01 / STREAMING</small><h2>Entertainment</h2></div><p>Popular plans, simple choices.</p></div>
-  <div class="grid" id="entGrid"></div>
-</section>
-
-<section class="catalogSection alt" id="iptv">
-  <div class="sectionTitle"><div><small>02 / LIVE TV</small><h2>IPTV</h2></div><p>Choose duration and continue.</p></div>
-  <div class="grid" id="iptvGrid"></div>
-</section>
-
-<section class="catalogSection" id="tools">
-  <div class="sectionTitle"><div><small>03 / PRODUCTIVITY</small><h2>AI & Premium Tools</h2></div><p>Creative and productivity offers.</p></div>
-  <div class="grid" id="toolGrid"></div>
-</section>
-
-<section class="payment" id="payment">
-  <div class="payCopy"><small>SECURE CHECKOUT</small><h2>Ready when you are.</h2><p>Tap <b>Buy Now</b> on any plan. You can pay through your UPI app and send the order details on WhatsApp.</p><div class="payPoints"><span>01 <b>Select a plan</b></span><span>02 <b>Pay with UPI</b></span><span>03 <b>Send order details</b></span></div></div>
-  <div class="qr"><img src="payment-qr.jpg" alt="UPI payment QR"><b>Q00403870@ybl</b><small>Universal Telecommunication Service</small></div>
-</section>
-
-<section class="help"><div><small>NEED HELP?</small><h2>We’re one message away.</h2></div><a class="cta" href="https://wa.me/917668677629" target="_blank">WhatsApp 7668677629 →</a></section>
-</main>
-<footer><div class="footerLogo">♛ PREMIUM ENTERTAINMENT STORE</div><p>© 2026 Premium Entertainment Store</p><small>Use only authorized products and approved payment services.</small></footer>
-
-<div class="modal" id="modal"><div class="sheet"><button class="close" onclick="closeBuy()">×</button><div class="modalTop"><small>CHECKOUT</small><span>🔒 UPI</span></div><h2 id="mTitle">Your Order</h2><div class="summary"><div><small>SELECTED PLAN</small><span id="mPlan"></span></div><b id="mPrice"></b></div><label>Name<input id="name" placeholder="Your name"></label><label>Email<input id="email" type="email" placeholder="your@email.com"></label><label>Mobile<input id="mobile" inputmode="numeric" placeholder="10 digit mobile"></label><button class="paybtn" onclick="payNow()">Pay Now with UPI →</button><button class="wabtn" onclick="sendWhatsApp()">Send Order on WhatsApp</button><p class="tiny">After payment, keep your transaction/reference ID. Activation is handled according to the selected service.</p></div></div>
-<script src="app.js"></script>
-</body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Premium Entertainment Store</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><div class="brand"><img src="premium-logo.png"><div><b>PREMIUM</b><span>ENTERTAINMENT</span><small>EXPERIENCE EXCELLENCE</small></div></div><div class="search"><span>⌕</span><input id="search" placeholder="Search apps, OTT, tools..." oninput="filterProducts()"></div><button class="icon" onclick="showCart()">🛒<i id="cartCount">0</i></button><button class="icon" onclick="document.body.classList.toggle('menuOpen')">☰</button></header>
+<nav class="nav"><button class="active" onclick="go('home')">⌂<span>Home</span></button><button onclick="filterCat('OTT')">▣<span>OTT</span></button><button onclick="filterCat('IPTV')">▤<span>IPTV</span></button><button onclick="filterCat('AI Tools')">🤖<span>AI Tools</span></button><button onclick="filterCat('Premium Apps')">▦<span>Premium Apps</span></button><button onclick="filterCat('All')">🏷<span>All Products</span></button><button onclick="filterCat('Offers')">✦<span>Offers</span></button></nav>
+<section class="hero"><div><p>YOUR ONE STOP DESTINATION</p><h1><em>PREMIUM</em><br>ENTERTAINMENT STORE</h1><h3>OTT &nbsp;|&nbsp; IPTV &nbsp;|&nbsp; AI TOOLS &nbsp;|&nbsp; PREMIUM APPS</h3><div class="trust">⚡ INSTANT ACTIVATION &nbsp; | &nbsp; 🛡 100% SECURE &nbsp; | &nbsp; 🎧 24/7 SUPPORT</div><div class="tagline">STREAM • WORK • CREATE • ENJOY</div><button class="shop" onclick="filterCat('All')">SHOP NOW →</button></div><div class="heroApps"><div>NETFLIX</div><div>Disney+<br>hotstar</div><div>prime<br>video</div><div>ZEE5</div><div>SONY<br>LIV</div><div>JioCinema</div></div></section>
+<div class="cats"><button onclick="filterCat('OTT')">📺<b>OTT</b><small>Movies, Web Series</small></button><button onclick="filterCat('IPTV')">🖥<b>IPTV</b><small>Live TV, Sports</small></button><button onclick="filterCat('AI Tools')">🤖<b>AI Tools</b><small>Boost Productivity</small></button><button onclick="filterCat('Premium Apps')">▦<b>Premium Apps</b><small>Professional Tools</small></button><button onclick="filterCat('All')">🏷<b>All Products</b><small>Explore More</small></button></div>
+<main><div class="sectionHead"><h2>🔥 Popular Subscriptions</h2><button onclick="filterCat('All')">View All →</button></div><div id="products" class="grid"></div></main>
+<footer><div>PREMIUM ENTERTAINMENT STORE</div><small>Experience Excellence • Secure Checkout • Customer Support</small></footer><a class="wa" href="https://wa.me/917668677629" target="_blank">◉ Chat with us</a>
+<div id="modal" class="modal"><div class="checkout"><button class="close" onclick="closeModal()">×</button><h2>Secure Checkout</h2><p id="selected"></p><label>Name<input id="name"></label><label>Email<input id="email"></label><label>Mobile<input id="mobile"></label><button class="pay" onclick="payNow()">💳 Pay Now via UPI</button><button class="order" onclick="waOrder()">💬 Send Order on WhatsApp</button><small>UPI: Q00403870@ybl<br>Payment name: Universal Telecommunication Service</small></div></div>
+<script src="app.js"></script></body></html>
