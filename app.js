@@ -25,6 +25,8 @@ const P=[
 ['STAR TV','TV Subscriptions','star-tv.jpg','3 Months ₹499 • 6 Months ₹799 • 12 Months ₹1299','Popular',[['3 Months',499],['6 Months',799],['12 Months',1299]]],
 ['ZIGGTV','TV Subscriptions','premium-logo.png','3 Months ₹399 • 6 Months ₹699 • 12 Months ₹1049','New',[['3 Months',399],['6 Months',699],['12 Months',1049]]],
 ['YouTube Premium – Family','TV Subscriptions','youtube-family.jpg','1 Month ₹149 • 5 Mails Supported<br>Mobile • Laptop • TV','Offer',[['1 Month',149]]]
+['IBOSOL Premium Player Activation','IBOSOL Player','ibosol-reseller-panel.png','1 Year ₹600 • Lifetime ₹1199','New',[['1 Year',600],['Lifetime',1199]]],
+['IBOSOL Reseller Panel','IBOSOL Player','ibosol-reseller-panel.png','20 Credits ₹6000 • 50 Credits ₹14000 • 100 Credits ₹28000<br>Activation on your mail','Popular',[['20 Credits',6000],['50 Credits',14000],['100 Credits',28000]]]
 ];
 let cat='All',cart=0,sel='',selPlan=null,qty=1;
 function card(x){const safe=x[0].replace(/'/g,"\\'");return `<article class="card"><span class="badge">${x[4]}</span><img src="${x[2]}" alt="${x[0]}" onerror="this.style.display='none'"><div class="info"><h3>${x[0]}</h3><div class="price">${x[3]}</div><button class="buy" onclick="checkout('${safe}')">🛒 Buy Now</button></div></article>`}
