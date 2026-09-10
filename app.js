@@ -39,4 +39,5 @@ function addToCart(){cart+=qty;document.getElementById('cartCount').textContent=
 function payNow(){let o=selPlan[5][selPlan._selectedIndex||0];if(!o[1]){waOrder();return}let n=document.getElementById('name').value||'Customer';let amount=o[1]*qty;location.href='upi://pay?pa=Q00403870@ybl&pn=Universal%20Telecommunication%20Service&am='+amount+'&cu=INR&tn='+encodeURIComponent(sel+' - '+o[0]+' x'+qty+' - '+n)}
 function waOrder(){let o=selPlan[5][selPlan._selectedIndex||0];let n=document.getElementById('name').value||'Customer';let m=document.getElementById('mobile').value||'';location.href='https://wa.me/917668677629?text='+encodeURIComponent('Hello, I want to order: '+sel+'\nPlan: '+o[0]+'\nQuantity: '+qty+'\nAmount: '+(o[1]?'₹'+(o[1]*qty):'Please confirm')+'\nName: '+n+'\nMobile: '+m)}
 function showCart(){alert(cart?('Cart items: '+cart):'Your cart is empty. Tap Buy Now to select a plan.')}
-function go(){window.scrollTo({top:0,behavior:'smooth')}render();
+function go(){window.scrollTo({top:0,behavior:'smooth'});}
+render();
