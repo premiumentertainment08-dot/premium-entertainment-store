@@ -19,62 +19,14 @@ const P=[
 ['CapCut Pro','Premium Apps','capcut-pro.jpg','6 Months ₹3499 • On your mail','Offer'],
 ['Gaana Plus','Premium Apps','gaana-plus.jpg','1 Year ₹299 • Activation on your number','Offer'],
 ['Play OTT','OTT','jiohotstar-banner.jpg','Yearly Plan ₹699 • 25+ OTT • Up to 5 Devices','Popular'],
-['IBO SOL Player Activation','Activations','ibosol-player-activation/ibosol-player.jpg','1 Year ₹600<br>Lifetime ₹1199','New']];
-let cat='All',cart=0,sel='',selPrice=0,qty=1,selPlan='';
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
-function getPlans(product){
-  const text=product[3].replace(/<br\s*\/?>/gi,' • ');
-  const plans=[];
-  const re=/([^•]+?)\s*₹\s*([\d,]+)/g; let m;
-  while((m=re.exec(text))){
-    let label=m[1].trim().replace(/^•\s*/,'').replace(/Reference Price/i,'').trim();
-    const price=parseInt(m[2].replace(/,/g,''),10);
-    if(!price || /Reference Price/i.test(m[1])) continue;
-    if(label) plans.push({label,price});
-  }
-  return plans;
-}
-function render(){
-  let q=(document.getElementById('search').value||'').toLowerCase();
-  let list=P.filter(x=>(cat==='All'||x[1]===cat||cat==='Offers'&&x[4]==='Offer')&&x[0].toLowerCase().includes(q));
-  document.getElementById('products').innerHTML=list.map(x=>`<article class="card"><span class="badge">${x[4]}</span><img src="${x[2]}" alt="${escapeHtml(x[0])}"><div class="info"><h3>${escapeHtml(x[0])}</h3><div class="price">${x[3]}</div><button class="buy" onclick="checkout('${x[0].replaceAll("'","\\'")}')">🛒 Buy Now</button></div></article>`).join('')||'<p>No products found.</p>'
-}
-function filterCat(c){cat=c;render();scrollTo({top:document.querySelector('main').offsetTop-70,behavior:'smooth'})}
-function filterProducts(){render()}
-function checkout(x){
-  const product=P.find(p=>p[0]===x); if(!product)return;
-  sel=x; qty=1;
-  const plans=getPlans(product);
-  selPlan=plans[0]?.label||'Selected plan'; selPrice=plans[0]?.price||0;
-  document.getElementById('checkoutProduct').textContent=x;
-  document.getElementById('qty').textContent=qty;
-  document.getElementById('planOptions').innerHTML=plans.length
-    ? plans.map((p,i)=>`<button class="planPill ${i===0?'active':''}" onclick="selectPlan(${p.price},'${p.label.replaceAll("'","\\'")}',this)">${escapeHtml(p.label)} <b>₹${p.price.toLocaleString('en-IN')}</b></button>`).join('')
-    : '<p>No plan price available. Please contact support.</p>';
-  updateCheckout(product);
-  document.getElementById('modal').classList.add('show');
-}
-function selectPlan(price,label,el){
-  selPrice=price; selPlan=label;
-  document.querySelectorAll('.planPill').forEach(b=>b.classList.remove('active')); el.classList.add('active');
-  updateCheckout(P.find(p=>p[0]===sel));
-}
-function updateCheckout(product){
-  document.getElementById('total').textContent='₹'+(selPrice*qty).toLocaleString('en-IN');
-  document.getElementById('payAmount').textContent='₹'+(selPrice*qty).toLocaleString('en-IN');
-  document.getElementById('detailText').innerHTML=`<b>${escapeHtml(sel)}</b><br>${escapeHtml(selPlan)} • Quantity ${qty}`;
-  document.getElementById('detailFeatures').innerHTML='<div>✨ Features</div><div>✔️ Quick activation</div><div>✔️ Secure checkout</div><div>✔️ Customer support</div>';
-}
-function changeQty(n){qty=Math.max(1,Math.min(10,qty+n));document.getElementById('qty').textContent=qty;updateCheckout(P.find(p=>p[0]===sel))}
-function closeModal(){document.getElementById('modal').classList.remove('show')}
-function payNow(){
-  let n=document.getElementById('name').value||'Customer';
-  location.href='upi://pay?pa=Q00403870@ybl&pn=Universal%20Telecommunication%20Service&am='+(selPrice*qty).toFixed(2)+'&cu=INR&tn='+encodeURIComponent(sel+' - '+selPlan+' - '+n)
-}
-function waOrder(){
-  let n=document.getElementById('name').value||'Customer',m=document.getElementById('mobile').value||'';
-  location.href='https://wa.me/917668677629?text='+encodeURIComponent('Hello, I want to order: '+sel+'\nPlan: '+selPlan+'\nQuantity: '+qty+'\nTotal: ₹'+(selPrice*qty).toLocaleString('en-IN')+'\nName: '+n+'\nMobile: '+m)
-}
-function showCart(){alert('Select a plan and tap Buy Now to continue.')}
-function go(){window.scrollTo({top:0,behavior:'smooth'})}
-render();
+['OPPLEX TV','TV Subscriptions','opplex-tv.jpg','1 Month ₹150 • 3 Months ₹349<br>6 Months ₹599 • 12 Months ₹999','Popular'],
+['ZUMTV','TV Subscriptions','zum-tv.jpg','3 Months ₹499 • 6 Months ₹699 • 12 Months ₹1049','Offer'],
+['FIBER STREAM TV','TV Subscriptions','fiber-stream-tv.jpg','3 Months ₹299 • 6 Months ₹499 • 12 Months ₹899','New'],
+['STAR TV','TV Subscriptions','star-tv.jpg','3 Months ₹499 • 6 Months ₹799 • 12 Months ₹1299','Popular'],
+['ZIGGTV','TV Subscriptions','premium-logo.png','3 Months ₹399 • 6 Months ₹699 • 12 Months ₹1049','New'],
+['YouTube Premium – Family','TV Subscriptions','youtube-family.jpg','1 Month ₹149 • 5 Mails Supported<br>Mobile • Laptop • TV','Offer']
+];
+let cat='All',cart=0,sel='';
+function card(x){return `<article class="card"><span class="badge">${x[4]}</span><img src="${x[2]}" alt="${x[0]}"><div class="info"><h3>${x[0]}</h3><div class="price">${x[3]}</div><button class="buy" onclick="checkout('${x[0].replaceAll("'","\\'")}')">🛒 Buy Now</button></div></article>`}
+function render(){let q=(document.getElementById('search').value||'').toLowerCase();let list=P.filter(x=>x[1]!=='TV Subscriptions'&&(cat==='All'||x[1]===cat||cat==='Offers'&&x[4]==='Offer')&&x[0].toLowerCase().includes(q));document.getElementById('products').innerHTML=list.map(card).join('')||'<p>No products found.</p>';let tv=P.filter(x=>x[1]==='TV Subscriptions'&&(cat==='All'||cat==='TV Subscriptions')&&x[0].toLowerCase().includes(q));document.getElementById('tvProducts').innerHTML=tv.map(card).join('')||'<p>No TV plans found.</p>';document.getElementById('tvPlans').style.display=(cat==='All'||cat==='TV Subscriptions')?'block':'none'}
+function filterCat(c){cat=c;render();scrollTo({top:document.querySelector('main').offsetTop-70,behavior:'smooth'})}function filterProducts(){render()}function checkout(x){sel=x;document.getElementById('selected').textContent='Selected: '+x;document.getElementById('modal').classList.add('show')}function closeModal(){document.getElementById('modal').classList.remove('show')}function payNow(){let n=document.getElementById('name').value||'Customer';location.href='upi://pay?pa=Q00403870@ybl&pn=Universal%20Telecommunication%20Service&cu=INR&tn='+encodeURIComponent(sel+' - '+n)}function waOrder(){let n=document.getElementById('name').value||'Customer';let m=document.getElementById('mobile').value||'';location.href='https://wa.me/917668677629?text='+encodeURIComponent('Hello, I want to order: '+sel+'\nName: '+n+'\nMobile: '+m)}function showCart(){alert('Buy Now checkout is ready. Add your selected plan by tapping Buy Now.')}function go(){window.scrollTo({top:0,behavior:'smooth'})}render();
