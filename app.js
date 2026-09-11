@@ -8,7 +8,7 @@ const P = [
   ['SonyLIV','OTT','sonyliv-banner.jpg','1M ₹99 • 3M ₹149 • 6M ₹199 • 1Y ₹299<br>Personal 1Y ₹699','Top Rated',[['1 Month',99],['3 Months',149],['6 Months',199],['1 Year',299],['Personal 1 Year',699]]],
   ['Lionsgate Play','OTT','lionsgate-play.webp','3 Months ₹299 • Premium membership','New',[['3 Months',299]]],
   ['Apple TV+','OTT','apple-tv-plus-correct.svg','6 Months ₹399 • Redeem/activation on own account','New',[['6 Months',399]]],
-  ['Discovery+ Premium','OTT','discovery-plus-correct.svg','6 Months ₹299 • Premium access','New',[['6 Months',299]]],
+  ['Discovery+ Premium','OTT','discovery-plus-logo.svg','6 Months ₹299 • Premium access','New',[['6 Months',299]]],
 
   // IPTV
   ['Starshare IPTV','IPTV','starshare-iptv.png','1M ₹150 • 3M ₹399 • 6M ₹699 • 12M ₹1299','Offer',[['1 Month',150],['3 Months',399],['6 Months',699],['12 Months',1299]]],
@@ -21,7 +21,7 @@ const P = [
   ['ZUMTV','TV Subscriptions','zum-tv.jpg','3 Months ₹499 • 6 Months ₹699 • 12 Months ₹1049','Offer',[['3 Months',499],['6 Months',699],['12 Months',1049]]],
   ['FIBER STREAM TV','TV Subscriptions','fiber-stream-tv.jpg','3 Months ₹299 • 6 Months ₹499 • 12 Months ₹899','New',[['3 Months',299],['6 Months',499],['12 Months',899]]],
   ['STAR TV','TV Subscriptions','star-tv.jpg','3 Months ₹499 • 6 Months ₹799 • 12 Months ₹1299','Popular',[['3 Months',499],['6 Months',799],['12 Months',1299]]],
-  ['ZIGGTV','TV Subscriptions','ziggtv-correct.svg','3 Months ₹399 • 6 Months ₹699 • 12 Months ₹1049','New',[['3 Months',399],['6 Months',699],['12 Months',1049]]],
+  ['ZIGGTV','TV Subscriptions','ziggtv-logo.svg','3 Months ₹399 • 6 Months ₹699 • 12 Months ₹1049','New',[['3 Months',399],['6 Months',699],['12 Months',1049]]],
   ['YouTube Premium – Family','TV Subscriptions','youtube-family.jpg','1 Month ₹149 • 5 Mails Supported<br>Mobile • Laptop • TV','Offer',[['1 Month',149]]],
 
   // Music
@@ -35,7 +35,7 @@ const P = [
   ['CapCut Pro','Software','capcut-pro-new.webp','1 Month ₹399 • Pro features','Offer',[['1 Month',399]]],
   ['CorelDRAW Premium','Software','coreldraw-logo.svg','1 Year ₹999 • Premium design software','New',[['1 Year',999]]],
   ['Kaspersky Antivirus','Software','kaspersky-logo.svg','1 Year ₹699 • Antivirus protection','Popular',[['1 Year',699]]],
-  ['Windows 10 Pro','Software','windows-10-pro-correct.svg','1 PC License ₹799 • Digital key','New',[['1 PC License',799]]],
+  ['Windows 10 Pro','Software','windows-10-pro-logo.svg','1 PC License ₹799 • Digital key','New',[['1 PC License',799]]],
   ['AutoCAD Premium','Software','autocad-logo.svg','1 Year ₹1499 • CAD software access','New',[['1 Year',1499]]],
 
   // AI Tools
@@ -66,11 +66,11 @@ const P = [
   ['Apple TV+ + Apple Music Combo','Combos','apple-tv-music-combo.webp','6 Months ₹699 • Combo subscription','Trending',[['6 Months',699]]],
   ['ZEE5 + SonyLIV Combo','Combos','zee5-sonyliv-combo.webp','1 Year ₹699 • Combo subscription','Offer',[['1 Year',699]]],
   ['Netflix + Prime Video Combo – Premium','Combos','netflix-prime-combo-2.webp','1 Year ₹1499 • Premium combo','New',[['1 Year',1499]]],
-  ['Play OTT Combo','Combos','play-ott-combo-correct.svg','Yearly ₹699 • 25+ OTT • Up to 5 Devices','Popular',[['Yearly Plan',699]]],
+  ['Play OTT Combo','Combos','play-ott-combo-logo.svg','Yearly ₹699 • 25+ OTT • Up to 5 Devices','Popular',[['Yearly Plan',699]]],
 
   // IBOSOL
-  ['IBOSOL Premium Player Activation','IBOSOL Player','ibosol-reseller-panel.png','1 Year ₹600 • Lifetime ₹1199','New',[['1 Year',600],['Lifetime',1199]]],
-  ['IBOSOL Reseller Panel','IBOSOL Player','ibosol-reseller-panel.png','20 Credits ₹6000 • 50 Credits ₹14000 • 100 Credits ₹28000<br>Activation on your mail','Popular',[['20 Credits',6000],['50 Credits',14000],['100 Credits',28000]]]
+  ['IBOSOL Premium Player Activation','IBOSOL Player','ibosol-premium-logo.svg','1 Year ₹600 • Lifetime ₹1199','New',[['1 Year',600],['Lifetime',1199]]],
+  ['IBOSOL Reseller Panel','IBOSOL Player','ibosol-reseller-logo.svg','20 Credits ₹6000 • 50 Credits ₹14000 • 100 Credits ₹28000<br>Activation on your mail','Popular',[['20 Credits',6000],['50 Credits',14000],['100 Credits',28000]]]
 ];
 
 let cat='All', cart=0, sel='', selPlan=null, qty=1;

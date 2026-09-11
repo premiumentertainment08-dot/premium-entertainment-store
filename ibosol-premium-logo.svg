@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#374151"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="700" rx="56" fill="url(#g)"/>
+<circle cx="600" cy="270" r="135" fill="#fff" opacity=".96"/>
+<text x="600" y="300" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+      font-size="82" font-weight="800" fill="#111827">IBOSOL</text>
+<text x="600" y="455" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+      font-size="42" font-weight="700" fill="#fff">PREMIUM PLAYER</text>
+<text x="600" y="535" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+      font-size="25" fill="#d1d5db">PREMIUM ENTERTAINMENT STORE</text>
+</svg>
