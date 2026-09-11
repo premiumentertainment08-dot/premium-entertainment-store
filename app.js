@@ -86,7 +86,7 @@ function refFor(name, plan, price){
 function card(x){
   const first=x[5]?.find(o=>o[1]);
   const compare=first?refFor(x[0],first[0],first[1]):'';
-  return `<article class="card"><span class="badge">${x[4]}</span><img src="${x[2]}" alt="${x[0]}" onerror="this.style.display='none'"><div class="info"><div class="catMini">${x[1]}</div><h3>${x[0]}</h3>${compare}<div class="price">${x[3]}</div><button class="buy" onclick="checkout('${esc(x[0])}')">🛒 Buy Now</button></div></article>`;
+  return `<article class="card"><span class="badge">${x[4]}</span><img src="${x[2]}" alt="${x[0]}" onerror="this.style.display='none'"><div class="info"><div class="catMini">${x[1]}</div><h3>${x[0]}</h3>${compare}<div class="price">${x[3]}</div><button class="buy" onclick="checkout('${esc(x[0])}')">Buy Now</button></div></article>`;
 }
 function matches(x,q){return x[0].toLowerCase().includes(q)||x[1].toLowerCase().includes(q);}
 function render(){
@@ -122,13 +122,14 @@ function selectPlan(i){
   document.getElementById('qty').textContent=qty;
   document.getElementById('total').textContent=o[1]?'₹'+total:'Contact';
   document.getElementById('payAmount').textContent=o[1]?'₹'+total:'Contact';
+  const direct=document.getElementById('directPayAmount'); if(direct) direct.textContent=o[1]?'₹'+total:'Contact';
   document.getElementById('detailTitle').innerHTML=`<strong>👤 ${sel}</strong><br><span>Selected Plan: ${o[0]}</span>${compare}`;
   document.getElementById('detailText').textContent=o[1]?'Plan price updates automatically with quantity. Complete payment by QR and send confirmation on WhatsApp.':'Contact us for the latest available plan and price.';
   document.getElementById('features').innerHTML='<div class="featureList"><div>✔ Fast activation</div><div>✔ Secure QR checkout</div><div>✔ WhatsApp order support</div></div>';
 }
 function changeQty(n){qty=Math.max(1,qty+n);selectPlan(selPlan?selPlan._selectedIndex||0:0);}
 function closeModal(){document.getElementById('modal').classList.remove('show');}
-function addToCart(){cart+=qty;document.getElementById('cartCount').textContent=cart;toast('🛒 Added to cart — you can continue shopping.');}
+function addToCart(){cart+=qty;document.getElementById('cartCount').textContent=cart;toast('Added to cart — you can continue shopping.');}
 function payNow(){
   if(!selPlan)return;
   const o=selPlan[5][selPlan._selectedIndex||0];
@@ -139,6 +140,15 @@ function payNow(){
   document.getElementById('paymentBox').scrollIntoView({behavior:'smooth',block:'center'});
 }
 function copyUPI(){navigator.clipboard?.writeText('Q00403870@ybl').then(()=>toast('✅ UPI ID copied')).catch(()=>toast('UPI ID: Q00403870@ybl'));}
+function payDirectUPI(){
+  if(!selPlan)return;
+  const o=selPlan[5][selPlan._selectedIndex||0];
+  if(!o||!o[1]){toast('Please select a paid plan first.');return;}
+  const amount=(o[1]*qty).toFixed(2);
+  const params=new URLSearchParams({pa:'Q00403870@ybl',pn:'Universal Telecommunication Service',am:amount,cu:'INR',tn:`${sel} - ${o[0]}`});
+  showOrderNotice('UPI payment opening','Your UPI app will open with the amount pre-filled.');
+  setTimeout(()=>{ window.location.href='upi://pay?'+params.toString(); },500);
+}
 function waOrder(){
   const o=selPlan?.[5]?.[selPlan._selectedIndex||0];
   const n=document.getElementById('name').value||'Customer';
@@ -150,7 +160,7 @@ function waOrder(){
   showOrderNotice('Order details ready','WhatsApp is opening. Please send the order message to complete your request.');
   setTimeout(()=>location.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg),900);
 }
-function showCart(){toast(cart?('🛒 Cart items: '+cart):'🛒 Your cart is empty. Tap Buy Now to select a plan.');}
+function showCart(){toast(cart?('Cart items: '+cart):'Your cart is empty. Tap Buy Now to select a plan.');}
 function go(){window.scrollTo({top:0,behavior:'smooth'});}
 
 function toast(text){

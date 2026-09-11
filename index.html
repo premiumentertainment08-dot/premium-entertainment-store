@@ -8,8 +8,6 @@
 <meta name="description" content="Premium Entertainment Store — OTT subscriptions, IPTV services, AI tools, software, premium apps and digital subscription plans in India. Fast delivery and WhatsApp support.">
 <meta name="keywords" content="OTT subscription India, IPTV subscription India, OTT plans, IPTV services, premium subscriptions, Netflix, JioHotstar, ZEE5, SonyLIV, AI tools, premium apps">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#050911">
-<meta name="author" content="Premium Entertainment Store">
 <link rel="canonical" href="https://premiumentertainment08-dot.github.io/premium-entertainment-store/">
 <meta property="og:title" content="OTT & IPTV Subscriptions India | Premium Entertainment Store">
 <meta property="og:description" content="OTT, IPTV, AI tools, software and premium digital subscriptions in one store.">
@@ -32,8 +30,8 @@
 <body>
 <header class="top">
   <div class="brand"><img src="premium-logo.png" alt="Premium Entertainment Store"><div><b>PREMIUM</b><span>ENTERTAINMENT</span><small>EXPERIENCE EXCELLENCE</small></div></div>
-  <div class="search"><span>⌕</span><input id="search" aria-label="Search products" placeholder="Search apps, OTT, tools..." oninput="filterProducts()"></div>
-  <button class="icon" onclick="showCart()">🛒<i id="cartCount">0</i></button>
+  <div class="search"><span>⌕</span><input id="search" placeholder="Search apps, OTT, tools..." oninput="filterProducts()"></div>
+  <button class="icon cartIcon" onclick="showCart()" aria-label="Cart"><span class="bagIcon" aria-hidden="true"></span><i id="cartCount">0</i></button>
   <button class="icon" onclick="document.body.classList.toggle('menuOpen')">☰</button>
 </header>
 
@@ -67,7 +65,7 @@
     <div class="tagline">STREAM • WORK • CREATE • ENJOY</div>
     <button class="shop" onclick="filterCat('All')">SHOP NOW →</button>
   </div>
-  <div class="heroSliderWrap"><div class="heroApps"><div>NETFLIX</div><div>JioHotstar</div><div>prime<br>video</div><div>ZEE5</div><div>SONY<br>LIV</div><div>AI TOOLS</div></div><div class="heroDots" aria-label="Hero slider navigation"><button data-slide="0" class="active"></button><button data-slide="1"></button><button data-slide="2"></button><button data-slide="3"></button><button data-slide="4"></button><button data-slide="5"></button></div></div>
+  <div class="heroSliderWrap"><div class="heroApps" aria-label="Featured brands"><div><img src="netflix.svg" alt="Netflix"></div><div><img src="jiohotstar.svg" alt="JioHotstar"></div><div><img src="primevideo.svg" alt="Prime Video"></div><div><img src="zee5.svg" alt="ZEE5"></div><div><img src="sonyliv.svg" alt="SonyLIV"></div><div><img src="gemini-pro.jpg" alt="AI Tools"></div></div><div class="heroDots" aria-label="Hero slider navigation"><button data-slide="0" class="active"></button><button data-slide="1"></button><button data-slide="2"></button><button data-slide="3"></button><button data-slide="4"></button><button data-slide="5"></button></div></div>
 </section>
 
 <section class="offerStrip">
@@ -127,7 +125,7 @@
       <img src="payment-qr.jpg" alt="UPI Payment QR" class="paymentQR">
       <div class="paySummary">Amount to pay: <strong id="qrAmount">₹0</strong></div>
       <div class="upiLine"><b>UPI ID:</b> Q00403870@ybl <button onclick="copyUPI()">Copy UPI ID</button></div>
-      <button class="order" onclick="waOrder()">✅ I Have Paid — Send Order Details</button>
+      <button class="directPay" onclick="payDirectUPI()">⚡ Pay Directly via UPI App <span id="directPayAmount">₹0</span></button><button class="order" onclick="waOrder()">✅ I Have Paid — Send Order Details</button>
       <p class="paymentNote">Payment is confirmed manually after your WhatsApp message. Do not share your UPI PIN or OTP.</p>
     </div>
     <small>UPI: Q00403870@ybl<br>Payment name: Universal Telecommunication Service</small>
