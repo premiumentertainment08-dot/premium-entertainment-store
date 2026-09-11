@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://premiumentertainment08-dot.github.io/premium-entertainment-store/sitemap.xml
