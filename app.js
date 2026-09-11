@@ -184,3 +184,25 @@ function initOfferPopup(){
 function closeOffer(){document.getElementById('offerPopup').classList.remove('show');}
 
 window.addEventListener('DOMContentLoaded',()=>{render();initSale();initOfferPopup();});
+
+
+/* Premium hero slider controls */
+function initHeroSlider(){
+  const slider=document.querySelector('.heroApps');
+  const dots=[...document.querySelectorAll('.heroDots button')];
+  if(!slider||!dots.length)return;
+  let index=0, timer;
+  const goSlide=(i, smooth=true)=>{
+    index=(i+dots.length)%dots.length;
+    slider.scrollTo({left:index*slider.clientWidth,behavior:smooth?'smooth':'auto'});
+    dots.forEach((d,n)=>d.classList.toggle('active',n===index));
+  };
+  dots.forEach(d=>d.addEventListener('click',()=>{goSlide(Number(d.dataset.slide));restart();}));
+  let startX=0, dragging=false;
+  slider.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;dragging=true;clearInterval(timer);},{passive:true});
+  slider.addEventListener('touchend',e=>{if(!dragging)return;const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>45)goSlide(index+(dx<0?1:-1));dragging=false;restart();},{passive:true});
+  slider.addEventListener('scroll',()=>{const i=Math.round(slider.scrollLeft/slider.clientWidth);if(i>=0&&i<dots.length){index=i;dots.forEach((d,n)=>d.classList.toggle('active',n===i));}},{passive:true});
+  function restart(){clearInterval(timer);timer=setInterval(()=>goSlide(index+1),3200);}
+  goSlide(0,false);restart();
+}
+window.addEventListener('DOMContentLoaded',initHeroSlider);

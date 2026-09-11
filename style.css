@@ -23,3 +23,15 @@
   .nav button{width:100%;text-align:left;padding:14px 20px;border-right:0;border-bottom:1px solid #202a36;font-size:18px}
   .nav span{display:inline;margin-left:10px;font-size:16px}
 }
+
+
+/* Premium smooth hero slider */
+.heroSliderWrap{width:430px;max-width:100%;position:relative}
+.heroApps{width:100%;display:flex;overflow:hidden;gap:0;padding:10px;background:#070b12;border:1px solid #e0b83e;transform:none;box-shadow:0 0 40px #8b6424;border-radius:18px;scroll-behavior:smooth;touch-action:pan-y;cursor:grab}
+.heroApps:active{cursor:grabbing}
+.heroApps div{flex:0 0 100%;height:250px;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 35%,#172c50,#07132c 65%);border-radius:12px;font-size:32px;font-weight:900;letter-spacing:2px;line-height:1.2;box-shadow:inset 0 0 35px rgba(255,255,255,.04)}
+.heroDots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+.heroDots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#657080;cursor:pointer;transition:.25s}
+.heroDots button.active{width:24px;border-radius:8px;background:#f1c451}
+@media(max-width:800px){.heroSliderWrap{width:100%;margin-top:28px}.heroApps{display:flex}.heroApps div{height:170px;font-size:25px}}
+@media(max-width:600px){.heroApps{display:flex;width:100%;padding:7px}.heroApps div{height:150px;font-size:22px}.heroDots{margin-top:9px}}
