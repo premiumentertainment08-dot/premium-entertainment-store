@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+<rect width="800" height="450" rx="28" fill="#c2410c"/>
+<circle cx="105" cy="105" r="58" fill="#fed7aa" opacity=".18"/>
+<text x="105" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="700" fill="#fed7aa">B</text>
+<text x="400" y="255" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="54" font-weight="700" fill="#fff">Bolt</text>
+<text x="400" y="315" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#d1d5db">Step-by-step guide</text>
+</svg>
